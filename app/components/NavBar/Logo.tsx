@@ -13,7 +13,7 @@ export default function Logo() {
       src="/images/logo.png"
       alt="Airbnb logo"
       width="100"
-      height="100"
+      height="30"
 	  className="hidden md:block cursor-pointer"
       onClick={handleHomeRedirect}
     />

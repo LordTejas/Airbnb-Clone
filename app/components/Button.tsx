@@ -20,7 +20,9 @@ const Button: React.FC<IButtonProps> = ({
     Icon,
 }) => {
     return (
-    <button 
+    <button
+    onClick={onClick}
+    disabled={disabled} 
     className={`
     relative
     disabled:opacity-70
@@ -36,9 +38,8 @@ const Button: React.FC<IButtonProps> = ({
     ${small ? 'text-sm' : 'text-md'}
     ${small ? 'text-semibold' : 'text-bold'}
     ${small ? 'border-[1px]' : 'border-2'}
-
     `}
-    onClick={onclick}>
+    >
         {label}
         {Icon && <Icon size={small ? 18 : 24} className="absolute top-4 left-3" />}
     </button>

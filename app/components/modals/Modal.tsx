@@ -96,14 +96,14 @@ const Modal: React.FC<IModalProps> = ({
 
                 {/* BODY */}
                 <div className="relative flex-auto p-6">
-
+                  {body}
                 </div>
 
                 {/* FOOTER */}
                 <div className="flex flex-col gap-2 p-6">
                     <div className="flex flex-row items-center gap-4 w-full">
                         {secondaryAction &&  secondaryActionLabel && <Button label={secondaryActionLabel} outlined onClick={secondaryAction} />}
-                        <Button label={actionLabel} onClick={handleSubmit} />
+                        <Button disabled={disabled} label={actionLabel} onClick={handleSubmit} />
                     </div>
                 </div>
 

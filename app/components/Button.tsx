@@ -8,7 +8,7 @@ interface IButtonProps {
     disabled?: boolean;
     outlined?: boolean;
     small?: boolean;
-    Icon?: IconType;
+    icon?: IconType;
 }
 
 const Button: React.FC<IButtonProps> = ({
@@ -17,7 +17,7 @@ const Button: React.FC<IButtonProps> = ({
     disabled,
     outlined,
     small,
-    Icon,
+    icon: Icon,
 }) => {
     return (
     <button

@@ -4,6 +4,7 @@ import './globals.css'
 import { Nunito } from 'next/font/google'
 import NavBar from './components/NavBar/NavBar'
 import RegisterModal from './components/modals/RegisterModal';
+import ToastProvider from './providers/ToastProvider';
 
 const nunito = Nunito({ subsets: ['latin'] })
 
@@ -20,7 +21,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={nunito.className}>
-        <RegisterModal isOpen title="Airbnb" onClose={() => {}} onSubmit={() => {}} actionLabel='Submit' secondaryAction={() => {}} secondaryActionLabel='Cancel' />
+        <ToastProvider />
+        <RegisterModal />
         <NavBar />
         {children}
         </body>
